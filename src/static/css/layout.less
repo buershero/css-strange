@@ -1,0 +1,41 @@
+/*
+ 说明：
+ display:box定义布局为盒模型后，可使用盒模型下的box-pack:justify属性
+*/
+.list{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+}
+
+.list a{
+     width:16%;
+     display:block;
+     height:44px;
+     line-height:44px;
+     text-align:center;
+     border:1px solid #E0E0E0;
+     color:#666;
+     font-size:16px;
+     margin-bottom:5px;
+     border-radius:3px;
+     background-color:#fefefe;
+     background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fefefe),color-stop(1,#eee));
+     color:#666;
+     text-decoration:none;
+}
+
+
+.formgroup-cell{
+    display: table-cell;
+    vertical-align: bottom;
+    select{
+     margin-top: 4px;
+    }
+}
+

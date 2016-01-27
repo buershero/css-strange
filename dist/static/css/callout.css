@@ -1,0 +1,15 @@
+.callout {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 12px;
+  line-height: 28px;
+}
+.callout.callout-success {
+  background: #d0ffef;
+  border-left: 3px solid #19c5af;
+}
+.callout.callout-warning {
+  background: #fff1d0;
+  border-left: 3px solid #ffb300;
+}

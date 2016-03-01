@@ -2,11 +2,81 @@
  说明：
  display:box定义布局为盒模型后，可使用盒模型下的box-pack:justify属性
 */
-.list {
+/* Turn on a 16x16 scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+/* Turn on single button up on top, and down on bottom */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  display: block;
+}
+/* Turn off the down area up on top, and up area on bottom */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none;
+}
+/* Place The scroll down button at the bottom */
+::-webkit-scrollbar-button:end:increment {
+  background-image: url(../img/scroll_cntrl_dwn.png);
+}
+/* Place The scroll up button at the up */
+::-webkit-scrollbar-button:start:decrement {
+  background-image: url(../img/scroll_cntrl_up.png);
+}
+/* Top area above thumb and below up button */
+::-webkit-scrollbar-track-piece:vertical:start {
+  background-image: url(../img/scroll_gutter_top.png), url(../img/scroll_gutter_mid.png);
+  background-repeat: no-repeat, repeat-y;
+}
+/* Bottom area below thumb and down button */
+::-webkit-scrollbar-track-piece:vertical:end {
+  background-image: url(../img/scroll_gutter_btm.png), url(../img/scroll_gutter_mid.png);
+  background-repeat: no-repeat, repeat-y;
+  background-position: bottom left, 0 0;
+}
+/* The thumb itself */
+::-webkit-scrollbar-thumb:vertical {
+  height: 28px;
+  -webkit-border-image: url(../img/scroll_thumb.png) 8 0 8 0 stretch stretch;
+  border-width: 8 0 8 0;
+}
+.scrollbar-box {
+  width: 300px;
+  height: 400px;
+  overflow-y: auto;
+  background-color: #dadada;
+  border-radius: 4px;
+  padding: 20px;
+}
+.scrollbar-box ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.formgroup-cell {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.formgroup-cell select {
+  margin: 10px 4px 0 0;
+}
+.list-container > div {
   display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.list-container > div a {
+  cursor: pointer;
+}
+.list-container > div a img {
+  width: 100px;
+  height: 100px;
+}
+.list-container > div.flex-start {
   justify-content: space-between;
 }
-.list a {
+.list-container > div.flex-start a {
   width: 16%;
   display: block;
   height: 44px;
@@ -20,10 +90,51 @@
   color: #666;
   text-decoration: none;
 }
-.formgroup-cell {
-  display: table-cell;
-  vertical-align: bottom;
+.list-container > div.space-between {
+  justify-content: space-between;
+  text-align: center;
+  line-height: 40px;
 }
-.formgroup-cell select {
-  margin-top: 4px;
+.list-container > div.space-around {
+  justify-content: space-around;
+}
+.list-container > div.flex-start {
+  justify-content: flex-start;
+}
+#wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#wrapper #bg {
+  background-size: 3500px auto;
+  width: 6750px;
+  height: 100%;
+  animation: bg 60s linear infinite;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  background-color: #348cb2;
+  background-image: url("http://p1.qhimg.com/t01a3ad32b30bcfeabb.jpg");
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+@keyframes bg {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2250px, 0, 0);
+  }
+}
+.rank-tab a {
+  color: #333;
+  text-decoration: none;
+}
+.rank-tab a + a::before {
+  color: #999;
+  padding: 4px;
+  content: " / ";
 }

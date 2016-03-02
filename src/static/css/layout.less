@@ -2,19 +2,6 @@
  说明：
  display:box定义布局为盒模型后，可使用盒模型下的box-pack:justify属性
 */
-// body{
-//   scrollbar-3dlight-color:#999;
-//   scrollbar-darkshadow-color:#999;
-//   scrollbar-highlight-color:#fff;
-//   scrollbar-shadow-color:#eee;
-//   scrollbar-arrow-color:#000;
-//   scrollbar-face-color:#ddd;
-//   scrollbar-track-color:#eee;
-//   scrollbar-base-color:#ddd;
-// }
-
-
-
 
 /* Turn on a 16x16 scrollbar */
 ::-webkit-scrollbar {
@@ -192,4 +179,57 @@
     content: " / ";
     }
   }
+}
+
+
+// object-fit ============================================
+.object-fit-box{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  img{
+    width: 200px;
+    border:1px solid #dfdfdf;
+    &.narrow {
+      width: 100px;
+      height: 150px;
+      margin-top: 10px;
+    }
+    &.fill {
+      object-fit: fill;
+    }
+
+    &.contain {
+      object-fit: contain;
+    }
+
+    &.cover {
+      object-fit: cover;
+    }
+
+    &.none {
+      object-fit: none;
+    }
+
+    &.scale-down {
+      object-fit: scale-down;
+    }
+  }
+}
+
+
+#wrap{
+  display: flex;
+  justify-content:space-around;
+}
+
+// main ===================================
+.main{
+  border-radius: 5px;
+  background: url("http://img3.static.69xiu.com/public/webImg/room/filterBg1.png") repeat;
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+
 }

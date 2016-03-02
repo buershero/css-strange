@@ -1,4 +1,4 @@
-# css-strange
-一些常被人忽视但又很适用的CSS样式CSS样式CSS样式CSS样式
+# aries
+一些常被人忽视但又很适用的CSS样式CSS样式
 
 

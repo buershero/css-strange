@@ -238,3 +238,44 @@ body {
   padding: 4px;
   content: " / ";
 }
+.object-fit-box {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+.object-fit-box img {
+  width: 200px;
+  border: 1px solid #dfdfdf;
+}
+.object-fit-box img.narrow {
+  width: 100px;
+  height: 150px;
+  margin-top: 10px;
+}
+.object-fit-box img.fill {
+  object-fit: fill;
+}
+.object-fit-box img.contain {
+  object-fit: contain;
+}
+.object-fit-box img.cover {
+  object-fit: cover;
+}
+.object-fit-box img.none {
+  object-fit: none;
+}
+.object-fit-box img.scale-down {
+  object-fit: scale-down;
+}
+#wrap {
+  display: flex;
+  justify-content: space-around;
+}
+.main {
+  border-radius: 5px;
+  background: url("http://img3.static.69xiu.com/public/webImg/room/filterBg1.png") repeat;
+  padding: 20px;
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+}

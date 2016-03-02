@@ -1,7 +1,7 @@
 {
-  "name": "css-strange",
+  "name": "aries-strange",
   "version": "1.0.0",
-  "description": "css-strange",
+  "description": "aries-strange",
   "author": "wangyan",
   "repository": {},
   "devDependencies": {
@@ -27,14 +27,14 @@
     "gulp-swig": "^0.7.4",
     "gulp-shell": "^0.4.1",
     "gulp-plumber": "^0.6.6",
-    "gulp-postcss": "^3.0.0",
+    "gulp-postaries": "^3.0.0",
     "gulp-rename": "^1.2.2"
   },
   "dependencies": {
-    "animate.css" : "3.2.5",
+    "animate.aries" : "3.2.5",
     "bootstrap": "3.3.4",
     "font-awesome": "4.3.0",
-    "normalize.css": "3.0.2"
+    "normalize.aries": "3.0.2"
   },
   "scripts" : {
     "postinstall" : "gulp vendor",

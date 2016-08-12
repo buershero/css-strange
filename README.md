@@ -68,3 +68,17 @@ main::before{
 > webkit-backface-visibility:hidden: 隐藏被旋转的 div 元素的背面 这个是解决多层级之间的混乱关系的。浏览器会自动帮你在轴上分层，之后遮罩。
 
 
+### word-wrap word-break 
+```
+word-wrap 断行
+word-wrap: normal
+word-wrap: break-word
+word-wrap: inherit
+```
+```
+word-break 断词
+word-break: normal 
+word-break: break-all 
+word-break: keep-all
+word-break: inherit
+```
